@@ -1,0 +1,1 @@
+# counts of each letter should be even, at most one letter count is odd

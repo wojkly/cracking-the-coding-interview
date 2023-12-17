@@ -1,0 +1,1 @@
+Iterate over matrix and save (in a set) rows / cols that have to be zero'd. the nzero them

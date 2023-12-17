@@ -1,0 +1,1 @@
+just iterate and count occurences. If new letter or end -> save count to result. Reset counter
