@@ -73,5 +73,34 @@ def first_common_ancestor(root: Node, p: int, q: int) -> Node:
         
     return None
 
-nodes = []
+nodes = [Node(i) for i in range(17)]
+
+nodes[8].add_left_child(nodes[4])
+nodes[8].add_right_child(nodes[12])
+
+nodes[4].add_left_child(nodes[2])
+nodes[4].add_right_child(nodes[6])
+
+nodes[2].add_left_child(nodes[1])
+nodes[2].add_right_child(nodes[3])
+
+nodes[6].add_left_child(nodes[5])
+
+nodes[12].add_left_child(nodes[10])
+nodes[12].add_right_child(nodes[14])
+
+nodes[10].add_right_child(nodes[11])
+
+nodes[14].add_left_child(nodes[13])
+nodes[14].add_right_child(nodes[15])
+
+nodes[16].add_left_child(nodes[8])
     
+assert first_common_ancestor(nodes[8], 1, 15)._v == 8
+
+assert first_common_ancestor(nodes[8], 1, 70) == None
+assert first_common_ancestor(nodes[8], 70, 15) == None
+
+assert first_common_ancestor(nodes[8], 2, 2)._v == 2
+assert first_common_ancestor(nodes[8], 11, 12)._v == 12
+assert first_common_ancestor(nodes[8], 8, 1)._v == 8
