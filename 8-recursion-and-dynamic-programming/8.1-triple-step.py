@@ -12,6 +12,6 @@ def triple_step(n):
                 
     return possible_ways[n]
 
-for i in range(1, 10):
+for i in range(1, 26):
     print("possible ways to go up ", i, " steps: ", triple_step(i))
     
